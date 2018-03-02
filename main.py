@@ -1,6 +1,6 @@
 from flask import Flask, render_template as render
 
-app = Flask(__name__, static_folder='public', template_folder='public')
+app = Flask(__name__, static_path='', static_folder='public', template_folder='public')
 
 @app.route('/')
 def main():

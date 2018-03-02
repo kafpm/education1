@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+
+{% block title %} Главная страница {% endblock %}
+
+
+{% block content %}
+<header>
+  <div class="container">
+    <div class="intro-text">
+      <div class="intro-lead-in">Добро пожаловать!</div>
+      <div class="intro-heading">
+        Только сегодня 50% скидки на любой курс 
+      </div>
+      <br><br>
+      <a href="/register" class="btn btn-danger">Зарегистрироваться</a>
+    </div>
+  </div>
+</header>
+
+
+<section class="gallery">
+  <h1 class="text-center"> Преподавательский состав </h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+        <a href="#">
+          <img src="http://placehold.it/800x600" class="img-responsive">
+        </a>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+        <a href="#">
+          <img src="http://placehold.it/800x600" class="img-responsive">
+        </a>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+        <a href="#">
+          <img src="http://placehold.it/800x600" class="img-responsive">
+        </a>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+        <a href="#">
+          <img src="http://placehold.it/800x600" class="img-responsive">
+        </a>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+        <a href="#">
+          <img src="http://placehold.it/800x600" class="img-responsive">
+        </a>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+        <a href="#">
+          <img src="http://placehold.it/800x600" class="img-responsive">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="panel-title text-center">
+        <h1>Записаться на курс</h2>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+          <form action="/messages" method="post">
+            <div class="row control-group">
+              <div class="form-group col-xs-12">
+                <label>Полное имя</label>
+                <input type="text" class="form-control" placeholder="Имя" name="fullname" required="" oninvalid="this.setCustomValidity('Введите полное имя')">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="row control-group">
+              <div class="form-group col-xs-12">
+                <label>Электронная почта</label>
+                <input type="text" class="form-control" placeholder="Введите электронную почту" name="email" required="" oninvalid="this.setCustomValidity('Введите электронную почту')">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="row control-group">
+              <div class="form-group col-xs-12">
+                <label>Цель обучения</label>
+                <textarea rows="5" class="form-control" placeholder="Сообщение" name="text" required="" oninvalid="this.setCustomValidity('Введите текст сообщения')"></textarea>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="form-group col-xs-12">
+                <button type="submit" class="btn btn-primary btn-lg">Отправить</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+</section>
+
+{% endblock %}

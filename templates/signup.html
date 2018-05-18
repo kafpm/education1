@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+
+{% block title %} Регистрация {% endblock %}
+
+
+{% block content %}
+
+<section>
+  <div class="container">
+    <div class="row">
+  		<div class="panel-title">
+  			<div class="text-center">
+  				<h1 class="title">Регистрация</h1>
+  				<hr />
+  			</div>
+      </div>
+  		<div class="col-lg-8 col-lg-offset-2">
+        <h3 style="color:red"> {{ alert }} </h3>
+        <form action="/signup" method="POST">
+          <div class="row control-group">
+            <div class="form-group col-xs-12">
+              <label>Логин</label>
+              <input type="text" class="form-control" name="login">
+            </div>
+          </div>
+          <div class="row control-group">
+            <div class="form-group col-xs-12">
+              <label>Электронна почта</label>
+              <input type="text" class="form-control" name="email">
+            </div>
+          </div>
+          <div class="row control-group">
+            <div class="form-group col-xs-12">
+              <label>Пароль</label>
+              <input type="password" class="form-control" name="password">
+            </div>
+          </div>
+          <br>
+          <div id="success"></div>
+            <div class="row">
+              <div class="form-group col-xs-12">
+                <button type="submit" class="btn btn-primary btn-lg">Отправить</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+  	</div>
+  </div>
+</section>
+
+{% endblock %}

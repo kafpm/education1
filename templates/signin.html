@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+
+{% block title %} Вход {% endblock %}
+
+
+{% block content %}
+
+<section>
+  <div class="container">
+    <div class="row">
+  		<div class="panel-title">
+  			<div class="text-center">
+  				<h1 class="title">Авторизация</h1>
+  				<hr />
+  			</div>
+      </div>
+  		<div class="col-lg-8 col-lg-offset-2">
+        <h3 style="color:red"> {{ alert }} </h3>
+        <form action="/signin" method="POST">
+          <div class="row control-group">
+            <div class="form-group col-xs-12">
+              <label>Логин</label>
+              <input type="text" class="form-control" name="login">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="row control-group">
+            <div class="form-group col-xs-12">
+              <label>Пароль</label>
+              <input type="password" class="form-control" name="password">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <br>
+            <div class="row">
+              <div class="form-group col-xs-12 col-md-2">
+                <input type="submit" class="btn btn-primary btn-lg" value="Вход">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+  	</div>
+</section>
+
+{% endblock %}
